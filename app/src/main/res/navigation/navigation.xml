@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation.xml"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.android.pagerduty.WelcomeFragment"
+        android:label="WelcomeFragment" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_dishListFragment"
+            app:destination="@id/dishListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dishListFragment"
+        android:name="com.example.android.pagerduty.dish.DishListFragment"
+        android:label="DishListFragment" >
+        <action
+            android:id="@+id/action_dishListFragment_to_createDishFragment2"
+            app:destination="@id/createDishFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/createDishFragment2"
+        android:name="com.example.android.pagerduty.dish.CreateDishFragment"
+        android:label="CreateDishFragment" >
+        <action
+            android:id="@+id/action_createDishFragment2_to_dishListFragment"
+            app:destination="@id/dishListFragment"
+            app:popUpTo="@id/dishListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
